@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zaru & His Siblings — Rate Card</title>
+    <meta name="description" content="Rate card & media kit for Zaru & His Siblings — Jakarta's beloved Maine Coon pet influencer family."/>
+    <link rel="icon" type="image/png" href="assets/logo.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #FDF8F9;
+            color: #2D1B1E;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ===== COLOR TOKENS ===== */
+        :root {
+            --pink-100: #FDE8ED;
+            --pink-200: #FBD1DB;
+            --pink-300: #F5A8B8;
+            --pink-400: #E8899B;
+            --pink-500: #D4738A;
+            --pink-600: #BE5C73;
+            --pink-700: #9E4659;
+            --dark: #2D1B1E;
+            --dark-soft: #4A2C30;
+            --warm: #FFF5F0;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,.1);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,.12);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 100px 0; }
+        .section-title {
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+        .section-sub {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--dark-soft);
+            max-width: 600px;
+            margin: 0 auto 56px;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--pink-100);
+            color: var(--pink-600);
+            font-size: .85rem;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, var(--pink-500), var(--pink-300));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: background .3s, box-shadow .3s, padding .3s;
+        }
+        .navbar.scrolled {
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 1px 12px rgba(0,0,0,.08);
+            padding: 10px 0;
+        }
+        .navbar .container {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--dark);
+        }
+        .nav-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: .9rem;
+            font-weight: 500;
+            color: var(--dark-soft);
+            transition: color .2s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute; bottom: -3px; left: 0; right: 0;
+            height: 2px; background: var(--pink-400);
+            transform: scaleX(0); transition: transform .3s;
+        }
+        .nav-links a:hover { color: var(--pink-500); }
+        .nav-links a:hover::after { transform: scaleX(1); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-weight: 600 !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { opacity: .9; transform: translateY(-1px); }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .nav-toggle span {
+            width: 26px; height: 2.5px;
+            background: var(--dark);
+            border-radius: 20px;
+            transition: .3s;
+        }
+        .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            position: relative;
+            padding-top: 80px;
+            background: linear-gradient(160deg, #FFF5F5 0%, #FDE8ED 30%, #FBD1DB 60%, #F5A8B8 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(232,137,155,.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(213,115,138,.1) 0%, transparent 50%);
+            animation: heroGlow 10s ease-in-out infinite alternate;
+        }
+        @keyframes heroGlow {
+            0% { transform: translate(0,0) rotate(0deg); }
+            100% { transform: translate(-30px,-30px) rotate(5deg); }
+        }
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        .hero-content h1 span { display: block; }
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--dark-soft);
+            max-width: 500px;
+            margin-bottom: 36px;
+        }
+        .hero-btns {
+            display: flex; gap: 16px; flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: .95rem;
+            border: none;
+            cursor: pointer;
+            transition: all .3s;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+            color: white;
+            box-shadow: 0 4px 15px rgba(212,115,138,.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212,115,138,.4); }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--dark);
+            border: 2px solid var(--pink-200);
+        }
+        .btn-secondary:hover { border-color: var(--pink-400); transform: translateY(-2px); }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn-whatsapp:hover { background: #1DA851; transform: translateY(-2px); }
+
+        .hero-stats {
+            display: flex; gap: 32px;
+        }
+        .hero-stats-item {
+            text-align: center;
+        }
+        .hero-stats-item .num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--pink-500);
+        }
+        .hero-stats-item .label {
+            font-size: .85rem;
+            color: var(--dark-soft);
+        }
+
+        .hero-visual {
+            display: flex; justify-content: center; align-items: center;
+            position: relative;
+        }
+        .hero-visual img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform .5s;
+        }
+        .hero-visual img:hover { transform: perspective(1000px) rotateY(0deg); }
+        .hero-float {
+            position: absolute;
+            background: var(--white);
+            padding: 14px 20px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            font-size: .85rem;
+            font-weight: 500;
+            animation: float 3s ease-in-out infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .hero-float-1 { top: 10%; right: -10px; animation-delay: 0s; }
+        .hero-float-2 { bottom: 15%; left: -20px; animation-delay: 1.5s; }
+        .hero-float .emoji { font-size: 1.3rem; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ===== CATS SECTION ===== */
+        .cats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .cat-card {
+            perspective: 800px;
+            height: 220px;
+            cursor: pointer;
+        }
+        .cat-card-inner {
+            position: relative;
+            width: 100%; height: 100%;
+            transition: transform .6s cubic-bezier(.4,0,.2,1);
+            transform-style: preserve-3d;
+        }
+        .cat-card.flipped .cat-card-inner { transform: rotateY(180deg); }
+        .cat-card-front, .cat-card-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: var(--radius-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-align: center;
+        }
+        .cat-card-front {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--pink-100);
+        }
+        .cat-card-front .cat-avatar {
+            width: 70px; height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid var(--pink-200);
+        }
+        .cat-card-front .cat-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        .cat-card-front .cat-role {
+            font-size: .8rem;
+            color: var(--pink-500);
+            font-weight: 500;
+        }
+        .cat-card-back {
+            background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .cat-card-back p { font-size: .8rem; line-height: 1.4; }
+        .cat-card-back .cat-personality {
+            font-size: .75rem;
+            margin-top: 6px;
+            opacity: .9;
+        }
+        .cat-card .flip-hint {
+            position: absolute;
+            bottom: 8px;
+            font-size: .7rem;
+            opacity: .6;
+        }
+
+        /* ===== RATECARD ===== */
+        .ratecard-bg {
+            background: var(--warm);
+        }
+        .rate-filter {
+            display: flex; gap: 12px; justify-content: center;
+            margin-bottom: 40px; flex-wrap: wrap;
+        }
+        .rate-filter button {
+            padding: 10px 24px;
+            border-radius: 100px;
+            border: 2px solid var(--pink-200);
+            background: var(--white);
+            color: var(--dark-soft);
+            font-weight: 600;
+            font-size: .9rem;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .rate-filter button.active, .rate-filter button:hover {
+            background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+            color: white;
+            border-color: transparent;
+        }
+        .rates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .rate-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--pink-100);
+            transition: all .4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .rate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .rate-card.featured {
+            border: 2px solid var(--pink-400);
+            box-shadow: 0 10px 30px rgba(212,115,138,.15);
+        }
+        .rate-card.featured::before {
+            content: '✨ Most Popular';
+            position: absolute;
+            top: 12px; right: -30px;
+            background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+            color: white;
+            font-size: .75rem;
+            font-weight: 600;
+            padding: 4px 36px;
+            transform: rotate(45deg);
+        }
+        .rate-card-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .rate-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .rate-card p {
+            font-size: .9rem;
+            color: var(--dark-soft);
+            margin-bottom: 20px;
+        }
+        .rate-price {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--pink-500);
+            margin-bottom: 20px;
+        }
+        .rate-price small {
+            font-size: .9rem;
+            font-weight: 500;
+            color: var(--dark-soft);
+        }
+        .rate-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .rate-features li {
+            padding: 6px 0;
+            font-size: .9rem;
+            color: var(--dark-soft);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .rate-features li::before {
+            content: '✓';
+            color: var(--pink-400);
+            font-weight: 700;
+        }
+        .rate-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ===== PORTFOLIO ===== */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+        .portfolio-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform .5s;
+        }
+        .portfolio-item:hover img { transform: scale(1.05); }
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+            display: flex; flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .portfolio-overlay h4 {
+            color: white;
+            font-weight: 600;
+        }
+        .portfolio-overlay span {
+            color: rgba(255,255,255,.8);
+            font-size: .85rem;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .contact-info p {
+            color: var(--dark-soft);
+            margin-bottom: 32px;
+        }
+        .contact-methods {
+            display: flex; flex-direction: column; gap: 16px;
+        }
+        .contact-method {
+            display: flex; align-items: center; gap: 16px;
+            padding: 16px 20px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--pink-100);
+            transition: all .3s;
+        }
+        .contact-method:hover {
+            border-color: var(--pink-300);
+            transform: translateX(5px);
+        }
+        .contact-method .icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            background: var(--pink-100);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .contact-method .info h4 { font-size: .95rem; font-weight: 600; }
+        .contact-method .info span { font-size: .85rem; color: var(--dark-soft); }
+
+        .contact-form {
+            background: var(--white);
+            padding: 36px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--pink-100);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: .95rem;
+            transition: border-color .3s;
+            background: var(--white);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--pink-400);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .form-success .emoji { font-size: 3rem; margin-bottom: 16px; }
+        .form-success h3 { margin-bottom: 8px; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,.8);
+            padding: 60px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand img {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            margin-bottom: 16px;
+        }
+        .footer-brand h4 {
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .footer-brand p { font-size: .9rem; max-width: 300px; }
+        .footer-social {
+            display: flex; gap: 12px; margin-top: 20px;
+        }
+        .footer-social a {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+            transition: background .3s;
+        }
+        .footer-social a:hover { background: var(--pink-500); }
+        .footer h5 {
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a {
+            font-size: .9rem;
+            transition: color .2s;
+        }
+        .footer-links a:hover { color: var(--pink-300); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: .85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content p { margin: 0 auto 36px; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-visual img { max-width: 380px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(255,255,255,.98);
+                backdrop-filter: blur(16px);
+                padding: 24px;
+                gap: 20px;
+                box-shadow: var(--shadow-md);
+            }
+            .hero-float { display: none; }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all .7s cubic-bezier(.4,0,.2,1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--pink-100); }
+        ::-webkit-scrollbar-thumb { background: var(--pink-400); border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="#" class="nav-logo">
+            <img src="assets/logo.png" alt="Zaru & His Siblings" />
+            Zaru &amp; His Siblings
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#cats">The Cats</a>
+            <a href="#rates">Rate Card</a>
+            <a href="#contact" class="nav-cta">Work With Us</a>
+        </div>
+        <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content fade-up">
+            <span class="badge">🐱 Pet Influencer · Jakarta</span>
+            <h1>
+                <span>Zaru</span>
+                <span class="text-gradient">&amp; His Siblings</span>
+            </h1>
+            <p>Jakarta's most beloved Maine Coon family. Let's create purr-fect content together. ✨</p>
+            <div class="hero-btns">
+                <a href="#rates" class="btn btn-primary">📋 View Rate Card</a>
+                <a href="https://wa.me/6281234567890?text=Hi%20Zaru%20%26%20His%20Siblings%21%20I%27d%20love%20to%20collaborate" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stats-item">
+                    <div class="num" data-target="124.2">0</div>
+                    <div class="label">TikTok Followers</div>
+                </div>
+                <div class="hero-stats-item">
+                    <div class="num" data-target="39">0</div>
+                    <div class="label">Instagram Followers</div>
+                </div>
+                <div class="hero-stats-item">
+                    <div class="num" data-target="6.9">0</div>
+                    <div class="label">Million Likes</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual fade-up">
+            <img src="assets/hero-cats.png" alt="Zaru & His Siblings — Maine Coon Cats" />
+            <div class="hero-float hero-float-1">
+                <span class="emoji">🎥</span> 124K+ followers
+            </div>
+            <div class="hero-float hero-float-2">
+                <span class="emoji">📸</span> Collab ready!
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT / STATS ===== -->
+<section class="section" id="about" style="background: var(--white);">
+    <div class="container">
+        <div class="fade-up" style="text-align:center;max-width:720px;margin:0 auto;">
+            <span class="badge">About Us</span>
+            <h2 class="section-title">Jakarta's Favorite <span class="text-gradient">Maine Coon</span> Family</h2>
+            <p style="font-size:1.05rem;color:var(--dark-soft);margin-bottom:28px;">
+                We're Nadya and her furry Maine Coon family — Zaru, Shoyu, Chashu, Miso, Anko, Kinako, Maguro, Fuku, Ocha, 
+                and our newest addition, Little Sister! 🐱✨ From wholesome content to viral moments, 
+                our fluffballs have captured hearts across Indonesia and beyond.
+            </p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:48px;">
+            <div class="fade-up" style="text-align:center;padding:28px;background:var(--pink-100);border-radius:var(--radius-sm);">
+                <div style="font-size:2.5rem;font-family:'Outfit',sans-serif;font-weight:800;color:var(--pink-500);">124K+</div>
+                <div style="color:var(--dark-soft);font-weight:500;">TikTok Fam</div>
+            </div>
+            <div class="fade-up" style="text-align:center;padding:28px;background:var(--pink-100);border-radius:var(--radius-sm);">
+                <div style="font-size:2.5rem;font-family:'Outfit',sans-serif;font-weight:800;color:var(--pink-500);">39K+</div>
+                <div style="color:var(--dark-soft);font-weight:500;">Instagram Fam</div>
+            </div>
+            <div class="fade-up" style="text-align:center;padding:28px;background:var(--pink-100);border-radius:var(--radius-sm);">
+                <div style="font-size:2.5rem;font-family:'Outfit',sans-serif;font-weight:800;color:var(--pink-500);">6.9M</div>
+                <div style="color:var(--dark-soft);font-weight:500;">Total Likes</div>
+            </div>
+            <div class="fade-up" style="text-align:center;padding:28px;background:var(--pink-100);border-radius:var(--radius-sm);">
+                <div style="font-size:2.5rem;font-family:'Outfit',sans-serif;font-weight:800;color:var(--pink-500);">50+</div>
+                <div style="color:var(--dark-soft);font-weight:500;">Brand Collabs</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MEET THE CATS ===== -->
+<section class="section" id="cats" style="background:var(--warm);">
+    <div class="container">
+        <div class="fade-up">
+            <span class="badge" style="display:table;margin:0 auto 12px;">Meet the Family</span>
+            <h2 class="section-title">The <span class="text-gradient">Fluffy</span> Squad</h2>
+            <p class="section-sub">Tap each card to learn more about our Maine Coon celebrities!</p>
+        </div>
+        <div class="cats-grid" id="catsGrid"></div>
+    </div>
+</section>
+
+<!-- ===== RATECARD ===== -->
+<section class="section ratecard-bg" id="rates">
+    <div class="container">
+        <div class="fade-up">
+            <span class="badge" style="display:table;margin:0 auto 12px;">Rate Card</span>
+            <h2 class="section-title">Collaboration <span class="text-gradient">Packages</span></h2>
+            <p class="section-sub">Choose a platform below to see our services and rates. Let's create something amazing together! 🐾</p>
+        </div>
+        <div class="rate-filter fade-up" id="rateFilter">
+            <button class="active" data-filter="all">All Services</button>
+            <button data-filter="tiktok">TikTok</button>
+            <button data-filter="instagram">Instagram</button>
+            <button data-filter="bundles">Bundles ✨</button>
+        </div>
+        <div class="rates-grid" id="ratesGrid"></div>
+    </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="section" id="portfolio" style="background:var(--white);">
+    <div class="container">
+        <div class="fade-up">
+            <span class="badge" style="display:table;margin:0 auto 12px;">Our Work</span>
+            <h2 class="section-title">Past <span class="text-gradient">Collaborations</span></h2>
+            <p class="section-sub">Brands we've had the pleasure of working with.</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item fade-up">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFE0E0,#FFB3B3);font-size:2.5rem;font-weight:800;color:white;font-family:'Outfit',sans-serif;">🐱</div>
+                <div class="portfolio-overlay"><h4>Pet Food Campaign</h4><span>Sponsored Content</span></div>
+            </div>
+            <div class="portfolio-item fade-up">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E0F0FF,#B3D4FF);font-size:2.5rem;font-weight:800;color:white;font-family:'Outfit',sans-serif;">🏠</div>
+                <div class="portfolio-overlay"><h4>Pet Accessories</h4><span>Product Review</span></div>
+            </div>
+            <div class="portfolio-item fade-up">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8FFE0,#B3FFB3);font-size:2.5rem;font-weight:800;color:white;font-family:'Outfit',sans-serif;">🛍️</div>
+                <div class="portfolio-overlay"><h4>Brand Ambassador</h4><span>6-month Partnership</span></div>
+            </div>
+            <div class="portfolio-item fade-up">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFF0E0,#FFCC99);font-size:2.5rem;font-weight:800;color:white;font-family:'Outfit',sans-serif;">📦</div>
+                <div class="portfolio-overlay"><h4>Unboxing Video</h4><span>TikTok Campaign</span></div>
+            </div>
+            <div class="portfolio-item fade-up">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0E0FF,#CC99FF);font-size:2.5rem;font-weight:800;color:white;font-family:'Outfit',sans-serif;">🎬</div>
+                <div class="portfolio-overlay"><h4>UGC Content</h4><span>Photo & Video</span></div>
+            </div>
+            <div class="portfolio-item fade-up">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFE0F0,#FFB3D4);font-size:2.5rem;font-weight:800;color:white;font-family:'Outfit',sans-serif;">🏆</div>
+                <div class="portfolio-overlay"><h4>Event Appearance</h4><span>Live Showcase</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact" style="background:var(--warm);">
+    <div class="container">
+        <div class="fade-up">
+            <span class="badge" style="display:table;margin:0 auto 12px;">Let's Collab</span>
+            <h2 class="section-title">Ready to work <span class="text-gradient">together?</span></h2>
+            <p class="section-sub">Fill in the form or reach out directly. We'd love to hear from you! 💕</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info fade-up">
+                <h3>Get in Touch</h3>
+                <p>We respond within 24 hours. For urgent inquiries, reach us on WhatsApp!</p>
+                <div class="contact-methods">
+                    <a href="https://wa.me/6281234567890" target="_blank" class="contact-method">
+                        <div class="icon">💬</div>
+                        <div class="info">
+                            <h4>WhatsApp</h4>
+                            <span>+62 812-3456-7890</span>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@zaruandhissiblings.com" class="contact-method">
+                        <div class="icon">📧</div>
+                        <div class="info">
+                            <h4>Email</h4>
+                            <span>hello@zaruandhissiblings.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/zaruandhissiblings" target="_blank" class="contact-method">
+                        <div class="icon">📸</div>
+                        <div class="info">
+                            <h4>Instagram DM</h4>
+                            <span>@zaruandhissiblings</span>
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@zaruandhissiblings" target="_blank" class="contact-method">
+                        <div class="icon">🎵</div>
+                        <div class="info">
+                            <h4>TikTok</h4>
+                            <span>@zaruandhissiblings</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form fade-up" id="contactForm">
+                <form id="inquiryForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" required placeholder="e.g. Budi Santoso" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required placeholder="e.g. budi@brand.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="brand">Brand / Company</label>
+                        <input type="text" id="brand" placeholder="e.g. Meow Petshop" />
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="tiktok-video">TikTok Video</option>
+                            <option value="tiktok-live">TikTok Live</option>
+                            <option value="ig-post">Instagram Post</option>
+                            <option value="ig-reel">Instagram Reel</option>
+                            <option value="ig-story">Instagram Story</option>
+                            <option value="bundle-premium">Premium Bundle</option>
+                            <option value="bundle-ultimate">Ultimate Bundle</option>
+                            <option value="ugc">UGC Content Only</option>
+                            <option value="event">Event Appearance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your campaign *</label>
+                        <textarea id="message" required placeholder="Describe your campaign idea, budget range, timeline, and any specific requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;">
+                        ✉️ Send Inquiry
+                    </button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="emoji">🎉</div>
+                    <h3>Thank you!</h3>
+                    <p>Your inquiry has been sent. We'll get back to you within 24 hours!</p>
+                    <button class="btn btn-secondary" style="margin-top:16px;" onclick="resetForm()">Send Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Zaru & His Siblings" />
+                <h4>Zaru &amp; His Siblings</h4>
+                <p>Jakarta's most beloved Maine Coon family. Let's create purr-fect content together! 🐱✨</p>
+                <div class="footer-social">
+                    <a href="https://www.tiktok.com/@zaruandhissiblings" target="_blank" aria-label="TikTok">🎵</a>
+                    <a href="https://www.instagram.com/zaruandhissiblings" target="_blank" aria-label="Instagram">📸</a>
+                    <a href="https://www.youtube.com/@zaruandhissiblings" target="_blank" aria-label="YouTube">▶️</a>
+                    <a href="https://wa.me/6281234567890" target="_blank" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cats">The Cats</a></li>
+                    <li><a href="#rates">Rate Card</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Contact</h5>
+                <ul class="footer-links">
+                    <li><a href="https://wa.me/6281234567890">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/zaruandhissiblings">Instagram DM</a></li>
+                    <li><a href="https://linktr.ee/zaruandhissiblings">Linktree</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Zaru &amp; His Siblings. Made with 💕 and lots of cat fur.
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ===== CATS DATA =====
+const cats = [
+    { name: 'Zaru', role: 'The OG 🐱', emoji: '🐱', color: '#FFD4D4', desc: 'The original star! Zaru started it all — 7 years of being the best boy.', personality: '👑 Leader · Calm · Majestic' },
+    { name: 'Shoyu', role: 'The Gentle Giant', emoji: '🦁', color: '#D4E8FF', desc: 'Big, fluffy, and full of love. Shoyu is the gentle soul of the family.', personality: '🤗 Cuddly · Sweet · Patient' },
+    { name: 'Chashu', role: 'The Baby 🥰', emoji: '🐾', color: '#D4FFD4', desc: 'The youngest and most playful! Chashu keeps everyone on their toes.', personality: '⚡ Energetic · Silly · Curious' },
+    { name: 'Miso', role: 'The Foodie', emoji: '🍜', color: '#FFF0D4', desc: 'Named after miso soup — always hungry, always watching your plate.', personality: '😋 Food-motivated · Sassy · Smart' },
+    { name: 'Anko', role: 'The Sweet One', emoji: '🍡', color: '#FFD4F0', desc: 'Sweet as red bean paste. Anko is the shy but loving one.', personality: '🌸 Gentle · Shy · Affectionate' },
+    { name: 'Kinako', role: 'The Troublemaker', emoji: '🌰', color: '#E8D4B0', desc: 'Named after roasted soybean flour — sweet on the outside, wild inside!', personality: '😈 Mischievous · Bold · Adventurous' },
+    { name: 'Maguro', role: 'The Chef 🐟', emoji: '🐟', color: '#FFD4D4', desc: 'Tuna-inspired name, tuna-obsessed personality. Always in the kitchen!', personality: '🍣 Foodie · Funny · Dramatic' },
+    { name: 'Fuku', role: 'Good Luck Charm', emoji: '🍀', color: '#D4FFE8', desc: 'Fuku means good fortune — and this little one brings joy everywhere.', personality: '🍀 Lucky · Bouncy · Happy' },
+    { name: 'Ocha', role: 'Tea Time 🍵', emoji: '🍵', color: '#D4F0FF', desc: 'Calm as a cup of green tea. Ocha is the zen master of the crew.', personality: '🧘 Relaxed · Peaceful · Elegant' },
+];
+
+// ===== RATES DATA =====
+const rates = [
+    { id: 1, platform: 'tiktok', icon: '🎵', name: 'TikTok Video', price: 'IDR 2,500,000', desc: '15-30s engaging video featuring your brand.', features: ['Script collaboration', 'Product showcase', 'Up to 2 revisions', 'Usage rights 3 months'], featured: false },
+    { id: 2, platform: 'tiktok', icon: '🎥', name: 'TikTok Live', price: 'IDR 3,500,000', desc: '30-60 min live session with real-time engagement.', features: ['Live product demo', 'Q&A with audience', 'Shoutouts', 'Recording included'], featured: false },
+    { id: 3, platform: 'instagram', icon: '📸', name: 'IG Feed Post', price: 'IDR 3,000,000', desc: 'Curated feed post with professional editing.', features: ['High-res photo set', 'Caption + tags', 'Up to 2 revisions', 'Usage rights 3 months'], featured: false },
+    { id: 4, platform: 'instagram', icon: '🎬', name: 'IG Reel', price: 'IDR 3,500,000', desc: 'Trendy Reel showcasing your brand creatively.', features: ['Trend-based editing', 'Music & effects', 'Story cross-promo', 'Up to 2 revisions'], featured: false },
+    { id: 5, platform: 'instagram', icon: '📖', name: 'IG Story Pack', price: 'IDR 1,500,000', desc: '3-5 interactive stories over 24 hours.', features: ['Polls & questions', 'Swipe-up link', 'Product highlights', 'Behind-the-scenes vibe'], featured: false },
+    { id: 6, platform: 'bundles', icon: '⭐', name: 'Premium Bundle', price: 'IDR 5,000,000', desc: 'TikTok video + IG Feed Post + Story Pack.', features: ['Cross-platform reach', 'Unified campaign', 'Priority support', 'Usage rights 6 months'], featured: true },
+    { id: 7, platform: 'bundles', icon: '👑', name: 'Ultimate Bundle', price: 'IDR 8,000,000', desc: 'TikTok + Reel + Feed Post + Story Pack + Live.', features: ['Full campaign coverage', 'Dedicated content day', 'Exclusive shoutout', 'Usage rights 12 months'], featured: false },
+    { id: 8, platform: 'bundles', icon: '🎨', name: 'UGC Only', price: 'IDR 1,500,000', desc: 'Raw content for your brand to use.', features: ['5-10 hi-res photos', '2-3 video clips', 'Full commercial usage', 'No posting required'], featured: false },
+];
+
+// ===== RENDER CATS =====
+function renderCats() {
+    const grid = document.getElementById('catsGrid');
+    const CAT_EMOJIS = ['🐱','🦁','🐾','🍜','🍡','🌰','🐟','🍀','🍵'];
+    grid.innerHTML = cats.map((cat, i) => `
+        <div class="cat-card" onclick="this.classList.toggle('flipped')">
+            <div class="cat-card-inner">
+                <div class="cat-card-front" style="background:${cat.color}">
+                    <div class="cat-avatar" style="background:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;font-size:2rem;">${CAT_EMOJIS[i]}</div>
+                    <div class="cat-name">${cat.name}</div>
+                    <div class="cat-role">${cat.emoji} ${cat.role}</div>
+                    <span class="flip-hint">👆 tap to learn more</span>
+                </div>
+                <div class="cat-card-back" style="background:linear-gradient(135deg,${cat.color},${cat.color === '#FFD4D4' ? '#E8899B' : cat.color})">
+                    <p>${cat.desc}</p>
+                    <div class="cat-personality">${cat.personality}</div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ===== RENDER RATES =====
+function renderRates(filter = 'all') {
+    const grid = document.getElementById('ratesGrid');
+    const filtered = filter === 'all' ? rates : rates.filter(r => r.platform === filter);
+    grid.innerHTML = filtered.map(r => `
+        <div class="rate-card ${r.featured ? 'featured' : ''}">
+            <div class="rate-card-icon">${r.icon}</div>
+            <h3>${r.name}</h3>
+            <p>${r.desc}</p>
+            <div class="rate-price">${r.price} <small>/ campaign</small></div>
+            <ul class="rate-features">
+                ${r.features.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+            <a href="#contact" class="btn btn-primary">Inquire Now</a>
+        </div>
+    `).join('');
+}
+
+// ===== FILTER RATES =====
+document.addEventListener('DOMContentLoaded', () => {
+    renderCats();
+    renderRates();
+
+    const filterBtns = document.querySelectorAll('.rate-filter button');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderRates(btn.dataset.filter);
+        });
+    });
+});
+
+// ===== SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+});
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// ===== MOBILE NAV =====
+document.getElementById('navToggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Close nav on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('navToggle').classList.remove('active');
+        document.getElementById('navLinks').classList.remove('open');
+    });
+});
+
+// ===== COUNTER ANIMATION =====
+function animateCounters() {
+    document.querySelectorAll('[data-target]').forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        const isDecimal = target % 1 !== 0;
+        const duration = 2000;
+        const start = performance.now();
+        
+        function update(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = eased * target;
+            el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+            if (progress < 1) requestAnimationFrame(update);
+            else el.textContent = target + (target === 6.9 ? 'M' : target === 124.2 || target === 39 ? 'K' : '');
+        }
+        requestAnimationFrame(update);
+    });
+}
+
+// Trigger counters on hero visibility
+const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            heroObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero');
+    if (hero) heroObserver.observe(hero);
+});
+
+// ===== FORM HANDLING =====
+function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = '⏳ Sending...';
+    btn.disabled = true;
+
+    const form = e.target;
+    const data = {
+        name: form.name.value,
+        email: form.email.value,
+        brand: form.brand.value,
+        service: form.service.value,
+        message: form.message.value
+    };
+
+    // Simulate sending — in production, replace with actual API call
+    setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.textContent = '✉️ Send Inquiry';
+        btn.disabled = false;
+    }, 1500);
+
+    return false;
+}
+
+function resetForm() {
+    document.getElementById('formSuccess').style.display = 'none';
+    document.getElementById('inquiryForm').style.display = 'block';
+    document.getElementById('inquiryForm').reset();
+}
+</script>
+</body>
+</html>
